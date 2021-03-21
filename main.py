@@ -3,11 +3,11 @@ import re, pyperclip
 
 # Create a regex for phone numbers
 phoneRegex = re.compile(r''' ( 
-((\d\d\d)|(\(\d\d\d\)))    # land area or telephone company dial
-(\s|-)        # separator0
+((\d\d\d)|(\(\d\d\d\)))    # area code or telephone company dial
+(\s|-)        # separator
 \d\d\d        # first 3 digits
 (\s|-)        # separator
-(\d\d\d(\d)?)        # last 3 -or- digits
+(\d\d\d(\d)?)        # last 3 -or- 4 digits
 (((ext(\.)?\s)|x)        # extension word-part (optional)
     (\d{2-5}))?        # extension number-part (optional)
 )
